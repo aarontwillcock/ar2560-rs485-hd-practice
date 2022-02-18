@@ -9,9 +9,8 @@ const unsigned long BAUD = 115200;
 //Global Vars
 //  LED Toggle Var
 bool LED_SET_ON = 0;
-
+//  Array of bytes to send
 byte byteArray[6] = {0x8A, 0xCC, 0x10, 0x01, 0x10, 0x95};
-char hexVal[2];
 
 //Initialization
 void setup() {
