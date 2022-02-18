@@ -1,8 +1,14 @@
 //Constants
 //  Transmission / Reception pin (1 = Tx, 0 = Rx)
 const char TX_RX_PIN = 2;
+//  LED Pin
+const char LED_PIN = 22;
 //  Serial baud rate
 const unsigned short BAUD = 9600;
+
+//Global Vars
+//  LED Toggle Var
+bool LED_SET_ON = 0;
 
 //Initialization
 void setup() {
@@ -12,6 +18,9 @@ void setup() {
 
   //Configure TxRx Pin
   pinMode(TX_RX_PIN, OUTPUT);
+
+  //Configure LED Pin
+  pinMode(LED_PIN, OUTPUT);
 
   //Set to sender
   digitalWrite(TX_RX_PIN, LOW);
@@ -28,7 +37,14 @@ void loop() {
     String inbound = Serial.readStringUntil('\n');
 
     //Print string received
+    Serial.print("Recv: ");
     Serial.println(inbound);
+
+    //Toggle LED
+    LED_SET_ON = !LED_SET_ON;
+
+    digitalWrite(LED_PIN,LED_SET_ON);
+    
   }
 
   //2 Hz freq
