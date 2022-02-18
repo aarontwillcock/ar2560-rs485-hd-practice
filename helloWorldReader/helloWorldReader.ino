@@ -4,7 +4,7 @@ const char TX_RX_PIN = 2;
 //  LED Pin
 const char LED_PIN = 22;
 //  Serial baud rate
-const unsigned short BAUD = 9600;
+const unsigned long BAUD = 115200;
 
 //Global Vars
 //  LED Toggle Var
