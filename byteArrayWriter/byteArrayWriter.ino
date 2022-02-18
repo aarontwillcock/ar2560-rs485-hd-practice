@@ -10,7 +10,7 @@ const unsigned long BAUD = 115200;
 //  LED Toggle Var
 bool LED_SET_ON = 0;
 
-byte byteArray[6] = {0xA8, 0xFC, 0x01, 0x01, 0x00, 0x59};
+byte byteArray[6] = {0x8A, 0xCC, 0x10, 0x01, 0x10, 0x95};
 char hexVal[2];
 
 //Initialization
